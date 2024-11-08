@@ -3,6 +3,8 @@ package com.semin.androidarchitectureexample.data.common.datastore
 import android.content.Context
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.core.intPreferencesKey
+import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 
 val Context.userPrefDataStore: DataStore<Preferences> by preferencesDataStore(PrefDataStore.USER)
@@ -15,7 +17,9 @@ object PrefDataStore {
 
 sealed interface PreferencesKey {
     data object User : PreferencesKey {
-
+        val NAME = stringPreferencesKey("user_name")
+        val AGE = intPreferencesKey("user_age")
+        val GENDER = intPreferencesKey("user_gender")
     }
 
     data object Reward : PreferencesKey {
