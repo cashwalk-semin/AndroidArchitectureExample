@@ -12,17 +12,17 @@
             android:id="@+id/tvUser"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:text="User"
             android:textColor="@color/black"
             android:textSize="16dp"
-            android:layout_marginTop="20dp"
-            app:layout_constraintBottom_toTopOf="@id/etName"
-            app:layout_constraintEnd_toStartOf="@id/buttonClear"
+            app:layout_constraintBottom_toTopOf="@id/etUserName"
+            app:layout_constraintEnd_toStartOf="@id/buttonUserClear"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/buttonClear"
+            android:id="@+id/buttonUserClear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="clear user"
@@ -32,68 +32,160 @@
             app:layout_constraintTop_toTopOf="@id/tvUser" />
 
         <EditText
-            android:id="@+id/etName"
+            android:id="@+id/etUserName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:hint="name"
             android:maxLength="10"
             android:maxLines="1"
-            android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toStartOf="@id/buttonName"
+            android:singleLine="true"
+            app:layout_constraintEnd_toStartOf="@id/buttonUserName"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvUser" />
 
         <Button
-            android:id="@+id/buttonName"
+            android:id="@+id/buttonUserName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="name"
-            app:layout_constraintBottom_toBottomOf="@id/etName"
+            android:text="user name"
+            app:layout_constraintBottom_toBottomOf="@id/etUserName"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/etName"
-            app:layout_constraintTop_toTopOf="@id/etName" />
+            app:layout_constraintStart_toEndOf="@id/etUserName"
+            app:layout_constraintTop_toTopOf="@id/etUserName" />
 
         <EditText
-            android:id="@+id/etAge"
+            android:id="@+id/etUserAge"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="age"
-            android:maxLength="3"
             android:inputType="number"
-            app:layout_constraintEnd_toStartOf="@id/buttonAge"
+            android:maxLength="3"
+            android:singleLine="true"
+            app:layout_constraintEnd_toStartOf="@id/buttonUserAge"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/etName" />
+            app:layout_constraintTop_toBottomOf="@id/etUserName" />
 
         <Button
-            android:id="@+id/buttonAge"
+            android:id="@+id/buttonUserAge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="age"
-            app:layout_constraintBottom_toBottomOf="@id/etAge"
+            android:text="user age"
+            app:layout_constraintBottom_toBottomOf="@id/etUserAge"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/etAge"
-            app:layout_constraintTop_toTopOf="@id/etAge" />
+            app:layout_constraintStart_toEndOf="@id/etUserAge"
+            app:layout_constraintTop_toTopOf="@id/etUserAge" />
 
         <EditText
-            android:id="@+id/etGender"
+            android:id="@+id/etUserGender"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="age"
-            android:maxLength="3"
+            android:hint="gender"
             android:inputType="number"
-            app:layout_constraintEnd_toStartOf="@id/buttonGender"
+            android:maxLength="3"
+            android:singleLine="true"
+            app:layout_constraintEnd_toStartOf="@id/buttonUserGender"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/etAge" />
+            app:layout_constraintTop_toBottomOf="@id/etUserAge" />
 
         <Button
-            android:id="@+id/buttonGender"
+            android:id="@+id/buttonUserGender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="gender"
-            app:layout_constraintBottom_toBottomOf="@id/etGender"
+            android:text="user gender"
+            app:layout_constraintBottom_toBottomOf="@id/etUserGender"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/etGender"
-            app:layout_constraintTop_toTopOf="@id/etGender" />
+            app:layout_constraintStart_toEndOf="@id/etUserGender"
+            app:layout_constraintTop_toTopOf="@id/etUserGender" />
+
+        <TextView
+            android:id="@+id/tvReward"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Reward"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toStartOf="@id/buttonRewardClear"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etUserGender" />
+
+        <Button
+            android:id="@+id/buttonRewardClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="clear reward"
+            app:layout_constraintBottom_toBottomOf="@id/tvReward"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvReward"
+            app:layout_constraintTop_toTopOf="@id/tvReward" />
+
+        <EditText
+            android:id="@+id/etRewardName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="name"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:singleLine="true"
+            app:layout_constraintEnd_toStartOf="@id/buttonRewardName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvReward" />
+
+        <Button
+            android:id="@+id/buttonRewardName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="reward name"
+            app:layout_constraintBottom_toBottomOf="@id/etRewardName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/etRewardName"
+            app:layout_constraintTop_toTopOf="@id/etRewardName" />
+
+        <EditText
+            android:id="@+id/etRewardPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="price"
+            android:inputType="number"
+            android:maxLength="3"
+            android:singleLine="true"
+            app:layout_constraintEnd_toStartOf="@id/buttonRewardPrice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etRewardName" />
+
+        <Button
+            android:id="@+id/buttonRewardPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="reward price"
+            app:layout_constraintBottom_toBottomOf="@id/etRewardPrice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/etRewardPrice"
+            app:layout_constraintTop_toTopOf="@id/etRewardPrice" />
+
+        <EditText
+            android:id="@+id/etRewardExpiredDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="expired date"
+            android:inputType="number"
+            android:maxLength="3"
+            android:singleLine="true"
+            app:layout_constraintEnd_toStartOf="@id/buttonRewardExpiredDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etRewardPrice" />
+
+        <Button
+            android:id="@+id/buttonRewardExpiredDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="reward expired date"
+            app:layout_constraintBottom_toBottomOf="@id/etRewardExpiredDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/etRewardExpiredDate"
+            app:layout_constraintTop_toTopOf="@id/etRewardExpiredDate" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -12,30 +12,55 @@ class MainActivity : BaseActivity<ActivityMainBinding>(layoutId = R.layout.activ
 
     override fun ActivityMainBinding.initView() {
         lifecycleScope.launch {
-
             viewModel.userUiState.collect { user ->
                 tvUser.text = user.toString()
 
-                etName.setText(user.name)
-                etAge.setText(user.age.toString())
-                etGender.setText(user.gender.toString())
+                etUserName.setText(user.name)
+                etUserAge.setText(user.age.toString())
+                etUserGender.setText(user.gender.toString())
             }
         }
 
-        buttonName.setOnClickListener {
-            viewModel.updateName(etName.text.toString())
+        lifecycleScope.launch {
+            viewModel.rewardUiState.collect { reward ->
+                tvReward.text = reward.toString()
+
+                etRewardName.setText(reward.name)
+                etRewardPrice.setText(reward.price.toString())
+                etRewardExpiredDate.setText(reward.expiredDate.toString())
+            }
         }
 
-        buttonAge.setOnClickListener {
-            viewModel.updateAge(etAge.text.toString().toInt())
+        buttonUserName.setOnClickListener {
+            viewModel.updateUserName(etUserName.text.toString())
         }
 
-        buttonGender.setOnClickListener {
-            viewModel.updateGender(etGender.text.toString().toInt())
+        buttonUserAge.setOnClickListener {
+            viewModel.updateUserAge(etUserAge.text.toString().toInt())
         }
 
-        buttonClear.setOnClickListener {
+        buttonUserGender.setOnClickListener {
+            viewModel.updateUserGender(etUserGender.text.toString().toInt())
+        }
+
+        buttonUserClear.setOnClickListener {
             viewModel.clearUser()
+        }
+
+        buttonRewardName.setOnClickListener {
+            viewModel.updateRewardName(etRewardName.text.toString())
+        }
+
+        buttonRewardPrice.setOnClickListener {
+            viewModel.updateRewardPrice(etRewardPrice.text.toString().toInt())
+        }
+
+        buttonRewardExpiredDate.setOnClickListener {
+            viewModel.updateRewardExpiredDate(etRewardExpiredDate.text.toString().toLong())
+        }
+
+        buttonRewardClear.setOnClickListener {
+            viewModel.clearReward()
         }
     }
 }

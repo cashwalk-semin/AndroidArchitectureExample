@@ -2,6 +2,7 @@ package com.semin.androidarchitectureexample.presentation.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.semin.androidarchitectureexample.domain.reward.model.Reward
 import com.semin.androidarchitectureexample.domain.reward.model.User
 import com.semin.androidarchitectureexample.domain.reward.repository.RewardRepository
 import com.semin.androidarchitectureexample.domain.user.repository.UserRepository
@@ -14,20 +15,21 @@ class MainViewModel(
     private val rewardRepository: RewardRepository,
 ) : ViewModel() {
     val userUiState = userRepository.getUser().stateIn(viewModelScope, SharingStarted.Eagerly, User.default)
+    val rewardUiState = rewardRepository.getReward().stateIn(viewModelScope, SharingStarted.Eagerly, Reward.default)
 
-    fun updateName(name: String) {
+    fun updateUserName(name: String) {
         viewModelScope.launch {
             userRepository.updateName(name)
         }
     }
 
-    fun updateAge(age: Int) {
+    fun updateUserAge(age: Int) {
         viewModelScope.launch {
             userRepository.updateAge(age)
         }
     }
 
-    fun updateGender(gender: Int) {
+    fun updateUserGender(gender: Int) {
         viewModelScope.launch {
             userRepository.updateGender(gender)
         }
@@ -36,6 +38,30 @@ class MainViewModel(
     fun clearUser() {
         viewModelScope.launch {
             userRepository.clearUser()
+        }
+    }
+
+    fun updateRewardName(name: String) {
+        viewModelScope.launch {
+            rewardRepository.updateName(name)
+        }
+    }
+
+    fun updateRewardPrice(price: Int) {
+        viewModelScope.launch {
+            rewardRepository.updatePrice(price)
+        }
+    }
+
+    fun updateRewardExpiredDate(expiredDate: Long) {
+        viewModelScope.launch {
+            rewardRepository.updateExpiredDate(expiredDate)
+        }
+    }
+
+    fun clearReward() {
+        viewModelScope.launch {
+            rewardRepository.clearReward()
         }
     }
 }
