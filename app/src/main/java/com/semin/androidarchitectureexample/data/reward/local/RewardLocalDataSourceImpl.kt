@@ -5,7 +5,6 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import com.semin.androidarchitectureexample.data.common.datastore.PreferencesKey
 import com.semin.androidarchitectureexample.domain.reward.model.Reward
-import com.semin.androidarchitectureexample.domain.reward.model.User
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
