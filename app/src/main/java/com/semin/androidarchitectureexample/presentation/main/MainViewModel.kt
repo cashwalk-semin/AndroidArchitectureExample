@@ -1,8 +1,8 @@
 package com.semin.androidarchitectureexample.presentation.main
 
 import androidx.lifecycle.ViewModel
-import com.semin.androidarchitectureexample.domain.repository.reward.RewardRepository
-import com.semin.androidarchitectureexample.domain.repository.user.UserRepository
+import com.semin.androidarchitectureexample.domain.reward.repository.RewardRepository
+import com.semin.androidarchitectureexample.domain.user.repository.UserRepository
 
 class MainViewModel(
     private val userRepository: UserRepository,
