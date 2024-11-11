@@ -3,7 +3,7 @@ package com.semin.androidarchitectureexample.presentation.main
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.semin.androidarchitectureexample.domain.reward.model.Reward
-import com.semin.androidarchitectureexample.domain.reward.model.User
+import com.semin.androidarchitectureexample.domain.user.model.User
 import com.semin.androidarchitectureexample.domain.reward.repository.RewardRepository
 import com.semin.androidarchitectureexample.domain.user.repository.UserRepository
 import kotlinx.coroutines.flow.SharingStarted

@@ -1,6 +1,6 @@
 package com.semin.androidarchitectureexample.data.user.local
 
-import com.semin.androidarchitectureexample.domain.reward.model.User
+import com.semin.androidarchitectureexample.domain.user.model.User
 import kotlinx.coroutines.flow.Flow
 
 interface UserLocalDataSource {

@@ -2,7 +2,7 @@ package com.semin.androidarchitectureexample.data.user
 
 import com.semin.androidarchitectureexample.data.user.local.UserLocalDataSource
 import com.semin.androidarchitectureexample.data.user.remote.UserRemoteDataSource
-import com.semin.androidarchitectureexample.domain.reward.model.User
+import com.semin.androidarchitectureexample.domain.user.model.User
 import com.semin.androidarchitectureexample.domain.user.repository.UserRepository
 import kotlinx.coroutines.flow.Flow
 

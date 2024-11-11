@@ -1,4 +1,4 @@
-package com.semin.androidarchitectureexample.domain.reward.model
+package com.semin.androidarchitectureexample.domain.user.model
 
 /**
  * Naming Rules
