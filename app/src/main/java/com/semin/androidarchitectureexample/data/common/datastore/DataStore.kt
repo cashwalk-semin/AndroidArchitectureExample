@@ -25,7 +25,7 @@ sealed interface PreferencesKey {
 
     data object Reward : PreferencesKey {
         val NAME = stringPreferencesKey("reward_name")
-        val PRICE = intPreferencesKey("reward_name")
+        val PRICE = intPreferencesKey("reward_price")
         val EXPIRED_DATE = longPreferencesKey("reward_expired_date")
     }
 }
